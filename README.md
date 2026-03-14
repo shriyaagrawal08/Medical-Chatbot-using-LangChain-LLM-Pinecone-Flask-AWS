@@ -20,3 +20,10 @@ Ques : Why we use clould platforms to deploy our project ?
 
 Ans : Because these platforms give us a URL and if we give this URL to someone, they can access our medical chatbot application ( no code is needed to give)
 And if suppose we dont want to use that application , we can stop the services , so we have noticed it gives sometime "Page not found"
+
+
+
+## How to add commits to github
+git add .
+git commit -m "fix"
+git push
