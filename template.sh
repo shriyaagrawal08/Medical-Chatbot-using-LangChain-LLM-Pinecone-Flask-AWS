@@ -16,5 +16,7 @@ touch research/trials.ipynb
 touch requirements.txt
 touch templates/chat.html
 touch static/style.css
+touch Dockerfile
+touch .dockerignore
 
 echo "Project structure created successfully!"
