@@ -210,3 +210,5 @@ __marimo__/
 faiss_index/
 
 data/
+
+medical_chatbot.egg-info/
