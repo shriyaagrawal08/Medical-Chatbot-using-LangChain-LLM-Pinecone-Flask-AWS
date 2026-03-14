@@ -1,0 +1,12 @@
+venv/
+.env
+__pycache__/
+*.pyc
+*.pkl
+*.pt
+*.bin
+*.db
+*.sqlite
+vectorstore/
+chroma/
+.DS_Store
