@@ -25,13 +25,18 @@ vectorstore = FAISS.load_local(
 
 retriever = vectorstore.as_retriever(
     search_type="similarity",
-    search_kwargs={"k": 5}
+    search_kwargs={"k": 2}
 )
 
 # -----------------------------
 # Load Phi3 model via Ollama
 # -----------------------------
-llm = OllamaLLM(model="phi3")
+
+llm = OllamaLLM(
+    model="phi3",
+    temperature=0.2,
+    num_predict=200
+)
 
 # -----------------------------
 # Create RAG chain
