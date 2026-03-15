@@ -24,8 +24,10 @@ And if suppose we dont want to use that application , we can stop the services ,
 
 
 ## How to add commits to github
+git status 
+
 git add .
 
 git commit -m "fix"
 
-git push
+git push origin main
