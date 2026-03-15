@@ -40,6 +40,7 @@ retriever = vectorstore.as_retriever(
 
 llm = HuggingFaceHub(
     repo_id="google/flan-t5-base",
+    task="text-generation",
     huggingfacehub_api_token=hf_token,
     model_kwargs={"temperature": 0.2, "max_length": 128}
 )
