@@ -9,3 +9,5 @@ langchain-community==0.3.26  # for community-contributed modules
 pymupdf
 numpy==1.26.4 # used with FAISS
 
+huggingface_hub
+

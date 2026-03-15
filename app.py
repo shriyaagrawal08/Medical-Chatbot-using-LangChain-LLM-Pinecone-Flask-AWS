@@ -1,11 +1,17 @@
 from flask import Flask, render_template, request
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_ollama import OllamaLLM
+from langchain_community.llms import HuggingFaceHub
 from langchain.chains import RetrievalQA
 import os
 
+
+from dotenv import load_dotenv
+load_dotenv()
+hf_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+
 app = Flask(__name__)
+
 
 # -----------------------------
 # Load Embedding Model
@@ -32,10 +38,10 @@ retriever = vectorstore.as_retriever(
 # Load Phi3 model via Ollama
 # -----------------------------
 
-llm = OllamaLLM(
-    model="phi3",
-    temperature=0.2,
-    num_predict=200
+llm = HuggingFaceHub(
+    repo_id="google/flan-t5-base",
+    huggingfacehub_api_token=hf_token,
+    model_kwargs={"temperature": 0.2, "max_length": 128}
 )
 
 # -----------------------------

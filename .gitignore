@@ -207,3 +207,7 @@ marimo/_lsp/
 __marimo__/
 
 medical_chatbot.egg-info/
+
+research/
+
+.env
